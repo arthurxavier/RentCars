@@ -1,0 +1,36 @@
+AllCops:
+  TargetRubyVersion: 2.5.7
+  UseCache: true
+  Exclude:
+    - bin/**/*
+    - db/**/*
+
+Rails:
+  Enabled: true
+
+require:
+  - rubocop-rspec
+
+Layout/SpaceInLambdaLiteral:
+  EnforcedStyle: require_space
+Metrics/BlockLength:
+  Enabled: false
+Metrics/LineLength:
+  Max: 120
+Metrics/ParameterLists:
+  CountKeywordArgs: false
+Style/AsciiComments:
+  Enabled: false
+Style/BlockDelimiters:
+  EnforcedStyle: braces_for_chaining
+Style/BracesAroundHashParameters:
+  EnforcedStyle: context_dependent
+Naming/BinaryOperatorParameterName:
+  Enabled: false
+Naming/UncommunicativeMethodParamName:
+  AllowedNames:
+    - at
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%i': '()'
+    '%w': '()'
