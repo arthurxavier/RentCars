@@ -3,7 +3,7 @@ services:
   db:
     image: postgres
     volumes:
-      - ./tmp/db:/var/lib/postgresql/data
+      - protgres_data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
   web:
@@ -15,3 +15,6 @@ services:
       - "3000:3000"
     depends_on:
       - db
+
+volumes:
+  protgres_data:
