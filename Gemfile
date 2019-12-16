@@ -45,6 +45,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Unity Tests
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
   # Best practices and coding conventions
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
