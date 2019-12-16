@@ -1,5 +1,16 @@
 require 'rails_helper'
 
 RSpec.describe Car, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'validations' do
+    subject { FactoryBot.create(:car) }
+
+    it { is_expected.to be_valid }
+
+    it { is_expected.to validate_presence_of(:model) }
+    it { is_expected.to validate_presence_of(:brand) }
+    it { is_expected.to validate_presence_of(:manufacture_year) }
+    it { is_expected.to validate_presence_of(:model_year) }
+    it { is_expected.to validate_presence_of(:transmission) }
+    it { is_expected.to validate_presence_of(:color) }
+  end
 end
