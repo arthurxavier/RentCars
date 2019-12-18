@@ -11,4 +11,8 @@ RSpec.describe Client, type: :model do
     it { is_expected.to validate_presence_of(:cnh) }
     it { is_expected.to validate_presence_of(:birth_date) }
   end
+
+  describe 'associations' do
+    it { should have_many(:rents) }
+  end
 end

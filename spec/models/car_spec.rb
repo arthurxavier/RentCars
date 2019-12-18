@@ -13,4 +13,8 @@ RSpec.describe Car, type: :model do
     it { is_expected.to validate_presence_of(:transmission) }
     it { is_expected.to validate_presence_of(:color) }
   end
+
+  describe 'associations' do
+    it { should have_one(:rent) }
+  end
 end

@@ -5,6 +5,8 @@ class Client < ApplicationRecord
   validates :cnh, length: { maximum: 11 }
   validate :is_adult
 
+  has_many :rents, dependent: :destroy
+
   private
 
   def is_adult

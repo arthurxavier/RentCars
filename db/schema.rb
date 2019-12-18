@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_16_164509) do
+ActiveRecord::Schema.define(version: 2019_12_17_162227) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,4 +64,19 @@ ActiveRecord::Schema.define(version: 2019_12_16_164509) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "rents", force: :cascade do |t|
+    t.string "status", null: false
+    t.decimal "price", null: false
+    t.date "rent_date", null: false
+    t.date "return_date", null: false
+    t.bigint "client_id"
+    t.bigint "car_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["car_id"], name: "index_rents_on_car_id"
+    t.index ["client_id"], name: "index_rents_on_client_id"
+  end
+
+  add_foreign_key "rents", "cars"
+  add_foreign_key "rents", "clients"
 end
