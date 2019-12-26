@@ -1,6 +1,6 @@
 ActiveAdmin.register Car do
   permit_params :model, :brand, :manufacture_year, :model_year, :transmission,
-                 :gears, :doors, :color, :seats_option
+                 :gears, :doors, :color, :seats_option, :price
 
   index do
     id_column
@@ -19,6 +19,11 @@ ActiveAdmin.register Car do
     column :doors
     column :color
     column "Seats", :seats_option
+    column :price do |car|
+      div :class => "price" do
+        "R$ #{car.price}"
+      end
+    end
     actions
   end
 end

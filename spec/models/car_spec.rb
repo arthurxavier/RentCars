@@ -12,6 +12,7 @@ RSpec.describe Car, type: :model do
     it { is_expected.to validate_presence_of(:model_year) }
     it { is_expected.to validate_presence_of(:transmission) }
     it { is_expected.to validate_presence_of(:color) }
+    it { is_expected.to validate_presence_of(:price) }
   end
 
   describe 'associations' do

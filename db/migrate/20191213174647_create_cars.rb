@@ -10,6 +10,7 @@ class CreateCars < ActiveRecord::Migration[5.2]
       t.integer :doors
       t.string :color, null: false
       t.string :seats_option
+      t.decimal :price, null: false
 
       t.timestamps
     end

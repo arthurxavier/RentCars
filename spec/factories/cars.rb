@@ -9,5 +9,6 @@ FactoryBot.define do
     doors {4}
     color {'#ff0000'}
     seats_option {'Couro'}
+    price {100.00}
   end
 end
