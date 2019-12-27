@@ -26,4 +26,20 @@ ActiveAdmin.register Car do
     end
     actions
   end
+
+  form do |f|
+    f.inputs do
+      f.input :brand
+      f.input :model
+      f.input :manufacture_year
+      f.input :model_year
+      f.input :transmission, :as => :select, collection: Hash[Car.transmission.options]
+      f.input :gears
+      f.input :doors
+      f.input :color
+      f.input :seats_option, :as => :select, collection: Hash[Car.seats_option.options]
+      f.input :price
+    end
+    f.actions
+  end
 end

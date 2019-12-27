@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2019_12_17_162227) do
     t.integer "doors"
     t.string "color", null: false
     t.string "seats_option"
+    t.decimal "price", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
