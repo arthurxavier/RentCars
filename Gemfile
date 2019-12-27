@@ -50,6 +50,8 @@ group :development, :test do
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
   gem 'factory_bot_rails'
+  gem 'pry-byebug'
+  gem 'pry-rails'
 end
 
 group :development do
